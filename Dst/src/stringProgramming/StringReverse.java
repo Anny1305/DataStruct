@@ -2,41 +2,37 @@ package stringProgramming;
 
 import java.util.Scanner;
 
-public class StringReverse {
+//Reverse words in a given string
+class StringReverse {
 
-	String outStr="";
-	
-	
-	public String revString (String str)
-	{
-		
-		if(str==null || str.length()==1)
-		{
-		    return str;	
-		}
-	
-		
-		return revString(str.substring(1))+str.charAt(0);
-		
-	}
-	
-	
-	
-	
-	public static void main(String[] args) 
-	{
-		
+	public static void main(String[] args) {
+
 		Scanner in = new Scanner(System.in);
-		String inputStr= in.nextLine();
-		String outStr= "";
-
-		int lastIndex = inputStr.length()-1;
-		while(lastIndex>=0)
-		{
-			outStr+=inputStr.charAt(lastIndex--);
-		}
+		int index = 0;
+		int testCases =  in.nextInt();
+		String[] inputStr = new String[testCases];
 		
-		System.out.println(outStr);
+		while (testCases > 0) {
+			inputStr[index] = new Scanner(System.in).nextLine();
+			index++;
+			testCases--;
+		}
+		for(int i =0;i<inputStr.length;i++)
+		{
+		    System.out.println(reverseEachWord(inputStr[i]));
+		}
+
+	}
+
+	private static String reverseEachWord(String inputStr) {
+		String outStr = "";
+		String[] splitStr = inputStr.split("\\.");
+
+		for (int i = 0; i < splitStr.length; i++) {
+			String temp = splitStr[i];
+			outStr = (i == 0 ? temp + outStr : temp + "." + outStr);
+		}
+		return outStr;
 	}
 
 }

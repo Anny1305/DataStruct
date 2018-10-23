@@ -13,6 +13,7 @@ public class MaxOccurCharacter
         // characters and initialize the array as 0 
         int count[] = new int[ASCII_SIZE]; 
        
+        
         // Construct character count array from the input 
         // string. 
         int len = str.length(); 
@@ -37,7 +38,7 @@ public class MaxOccurCharacter
     // Driver Method 
     public static void main(String[] args) 
     { 
-        String str = "aaabbddb333"; 
+        String str = "dkfjdnfkjfnnn"; 
         System.out.println("Max occurring character is " + 
                             getMaxOccuringChar(str)); 
     }
