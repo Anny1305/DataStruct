@@ -13,7 +13,7 @@ public class ArrayRotation {
 		    }
 			
 			arr[arr.length-1]=temp;
-			number--;
+			number--; 
 	
 		}
 	}
