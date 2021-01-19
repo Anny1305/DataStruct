@@ -1,1 +1,3 @@
 1.  Check divisibility in a binary stream
+2.  geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/
+3. construct tree from post and Level order
