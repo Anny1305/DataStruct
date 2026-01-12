@@ -17,7 +17,7 @@ public class Factorial {
 		System.out.println("Enter the Number");
 		Scanner in = new Scanner(System.in);
 		int num  =in.nextInt();
-		System.out.println("Factorial is : "+fact(num));
+		System.out.println("Fact is : "+fact(num));
 	}
 
 }
